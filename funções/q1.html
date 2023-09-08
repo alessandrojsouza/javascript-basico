@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    p{
+        color: blueviolet;
+    }
+</style>
+
+<body>
+    <h1>Lista de Funções - Questão 1</h1>
+    <h3> O quadrado de cada elemento do array [3,5,7,3,8,9,1]</h3> 
+    <hr/>
+   
+    <h3>Usando for simples</h3>
+    <script>
+        const vet = [3,5,7,3,8,9,1]
+        let vet_for = []
+        //solução com for simples
+        for (let i = 0; i < vet.length; i++) {
+            vet_for[i] = vet[i] * 2;
+        }
+        document.write(`<p> Resultado: ${vet_for} </p>`)
+    </script>
+
+    <hr>
+    <h3>Usando forEach</h3>
+    <script>
+        let vet_for_each = []
+        vet.forEach( (e,i) => vet_for_each[i]= e * 2)
+        document.write(`<p> Resultado: ${vet_for_each} </p>`)
+    </script>
+
+    <hr>
+    <h3>Usando Map</h3>
+    <Script>
+        let vet_map =  vet.map( e => e *2 )
+        document.write(`<p> Resultado: ${vet_for_each} </p>`)
+    </Script>
+
+</body>
+</html>
