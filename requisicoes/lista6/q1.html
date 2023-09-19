@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload="userDetail()">
-    <script>
-        var objeto = {}
-        function userDetail(){
-           objeto = fetch('https://jsonplaceholder.typicode.com/users/1')
-                .then(response => response.json())
-                .then(dado => {return dado})
-        }
-        document.write(objeto.name)
-    </script>
-</body>
+    <body onload="getUser()">
+        <script>
+            async function getUser(){
+                let response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+                let objeto = await response.json()
+                console.log(objeto)
+                document.write(JSON.stringify(objeto))
+            }
+        </script>
+    </body>
 </html>

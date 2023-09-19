@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <hr>
+
+    <form action="">
+        Nome <input id="nome" type="text"/>
+        email <input id="email" type="email"/>
+        Endereço <input id="street" type="text"/>
+        <button type="button" onclick="addUser()">Cadastrar</button>
+    </form>
+
+    <script>
+        function addUser(){
+            const user = {
+                name: document.querySelector('input#nome').value,
+                email: document.querySelector('input#email').value,
+                address: {
+                    street: document.querySelector('#street').value
+                }
+            }
+            console.log(user)
+        }
+    </script>
+</body>
+</html>
